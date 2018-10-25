@@ -17,3 +17,10 @@ pulp3-source-centos7      not created (libvirt)
 pulp3-source-fedora27     not created (libvirt)
 pulp3-source-fedora28     not created (libvirt)
 ```
+
+Any of the `pulp3` labeled boxes will both spin-up and provision the labeled Ansible installation scenario for Pulp 3. The base OS boxes, such as centos7, can be used to spin-up a clean environment that any existing or custom playbook is run against directly. For example:
+
+```
+vagrant up centos7
+ansible-playbook my-pulp-install.yaml -l centos7
+```
