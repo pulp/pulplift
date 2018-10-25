@@ -24,3 +24,11 @@ Any of the `pulp3` labeled boxes will both spin-up and provision the labeled Ans
 vagrant up centos7
 ansible-playbook my-pulp-install.yaml -l centos7
 ```
+
+## Setup
+
+To setup Pulplift, ensure that all of [Forklift's requirements](https://github.com/theforeman/forklift#requirements) are met. Now run the `setup.sh` script:
+
+```
+./setup.sh
+```
