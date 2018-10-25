@@ -1,0 +1,27 @@
+forklift/
+ansible-pulp3/
+
+# Vim
+*.swo
+*.swp
+*.swn
+
+katello-installer*
+foreman-installer*
+.idea
+repo
+
+# Ansible
+*.retry
+*.pyc
+user_playbooks
+playbooks/galaxy_roles
+requirements.yml
+
+# Vagrant
+.vagrant
+boxes.yaml
+vagrant/Gemfile.lock
+vagrant/settings.yaml
+vagrant/boxes.d/*-local.yaml
+vagrant/boxes.d/80-tmp-*.yaml

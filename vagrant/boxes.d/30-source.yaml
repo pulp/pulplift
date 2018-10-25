@@ -1,0 +1,20 @@
+pulp3-source-fedora27:
+  box: 'fedora27'
+  memory: 2048
+  ansible:
+    playbook: "ansible-pulp3/source-install.yml"
+    galaxy_role_file: "requirements.yml"
+
+pulp3-source-fedora28:
+  box: 'fedora28'
+  memory: 2048
+  ansible:
+    playbook: "ansible-pulp3/source-install.yml"
+    galaxy_role_file: "requirements.yml"
+
+pulp3-source-centos7:
+  box: 'centos7'
+  memory: 2048
+  ansible:
+    playbook: "ansible-pulp3/source-install.yml"
+    galaxy_role_file: "requirements.yml"
