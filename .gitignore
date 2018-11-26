@@ -1,5 +1,5 @@
-forklift/
-ansible-pulp3/
+forklift
+ansible-pulp3
 
 # Vim
 *.swo
