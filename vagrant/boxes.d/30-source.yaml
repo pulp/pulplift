@@ -1,5 +1,9 @@
 pulp3-source-fedora27:
   box: 'fedora27'
+  sshfs:
+    host_path: '..'
+    guest_path: '/home/vagrant/devel'
+    reverse: False
   memory: 2048
   ansible:
     playbook: "ansible-pulp3/source-install.yml"
@@ -7,6 +11,10 @@ pulp3-source-fedora27:
 
 pulp3-source-fedora28:
   box: 'fedora28'
+  sshfs:
+    host_path: '..'
+    guest_path: '/home/vagrant/devel'
+    reverse: False
   memory: 2048
   ansible:
     playbook: "ansible-pulp3/source-install.yml"
@@ -14,6 +22,10 @@ pulp3-source-fedora28:
 
 pulp3-source-fedora29:
   box: 'fedora29'
+  sshfs:
+    host_path: '..'
+    guest_path: '/home/vagrant/devel'
+    reverse: False
   memory: 2048
   ansible:
     playbook: "ansible-pulp3/source-install.yml"
@@ -21,6 +33,10 @@ pulp3-source-fedora29:
 
 pulp3-source-centos7:
   box: 'centos7'
+  sshfs:
+    host_path: '..'
+    guest_path: '/home/vagrant/devel'
+    reverse: False
   memory: 2048
   ansible:
     playbook: "ansible-pulp3/source-install.yml"
