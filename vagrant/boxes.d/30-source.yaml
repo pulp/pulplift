@@ -32,7 +32,7 @@ pulp3-source-centos7:
     galaxy_role_file: "requirements.yml"
 
 pulp3-source-debian9:
-  box: 'centos7'
+  box: 'debian9'
   sshfs:
     host_path: '..'
     guest_path: '/home/vagrant/devel'
