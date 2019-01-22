@@ -4,3 +4,8 @@ centos7:
   google_options:
     image_family: 'centos-7'
   pty:        true
+
+
+centos7-fips:
+  box_name: 'pulp/centos7-fips'
+  pty: true

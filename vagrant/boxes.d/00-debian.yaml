@@ -1,0 +1,7 @@
+debian9:
+  box_name: 'debian/stretch64'
+  image_name: !ruby/regexp '/Debian 9.*/'
+  pty: true
+  ansible:
+    variables:
+      ansible_python_interpreter: /usr/bin/python3
