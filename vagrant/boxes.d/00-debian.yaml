@@ -1,7 +1,10 @@
-debian9:
-  box_name: 'debian/stretch64'
-  image_name: !ruby/regexp '/Debian 9.*/'
-  pty: true
-  ansible:
-    variables:
-      ansible_python_interpreter: /usr/bin/python3
+# Debian 9 doesn't work because it uses Python 3.5 (< 3.6)
+# Uncomment this (and fix the box name) when Debian 10 is out
+
+# debian10:
+#   box_name: 'debian/stretch64'
+#   image_name: !ruby/regexp '/Debian 10.*/'
+#   pty: true
+#   ansible:
+#     variables:
+#       ansible_python_interpreter: /usr/bin/python3
