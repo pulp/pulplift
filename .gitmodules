@@ -1,0 +1,8 @@
+[submodule "ansible-pulp3"]
+	path = ansible-pulp3
+	url = ../ansible-pulp3
+	branch = master
+[submodule "forklift"]
+	path = forklift
+	url = ../../theforeman/forklift
+	branch = master

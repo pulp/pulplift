@@ -27,8 +27,8 @@ ansible-playbook my-pulp-install.yaml -l centos7
 
 ## Setup
 
-To setup Pulplift, ensure that all of [Forklift's requirements](https://github.com/theforeman/forklift#requirements) are met. Now run the `setup.sh` script:
+To setup Pulplift, ensure that all submodules are updated and in place
 
 ```
-./setup.sh
+git submodule update --init
 ```
