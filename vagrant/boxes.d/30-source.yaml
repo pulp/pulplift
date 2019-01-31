@@ -7,7 +7,7 @@ pulp3-source-fedora28:
   memory: 2048
   ansible:
     playbook: "ansible-pulp3/source-install.yml"
-    galaxy_role_file: "requirements.yml"
+    galaxy_role_file: "ansible-pulp3/requirements.yml"
 
 pulp3-source-fedora29:
   box: 'fedora29'
@@ -18,7 +18,7 @@ pulp3-source-fedora29:
   memory: 2048
   ansible:
     playbook: "ansible-pulp3/source-install.yml"
-    galaxy_role_file: "requirements.yml"
+    galaxy_role_file: "ansible-pulp3/requirements.yml"
 
 pulp3-source-centos7:
   box: 'centos7'
@@ -29,7 +29,7 @@ pulp3-source-centos7:
   memory: 2048
   ansible:
     playbook: "ansible-pulp3/source-install.yml"
-    galaxy_role_file: "requirements.yml"
+    galaxy_role_file: "ansible-pulp3/requirements.yml"
 
 # pulp3-source-debian10:
 #   box: 'debian10'
@@ -40,4 +40,4 @@ pulp3-source-centos7:
 #   memory: 2048
 #   ansible:
 #     playbook: "ansible-pulp3/source-install.yml"
-#     galaxy_role_file: "requirements.yml"
+#     galaxy_role_file: "ansible-pulp3/requirements.yml"
