@@ -1,0 +1,18 @@
+---
+- hosts: all
+  vars:
+    paths_to_vars_files:
+    - '../local.dev-config.yml'
+    - '../example.dev-config.yml'
+  pre_tasks:
+    - include_vars: "{{ item }}"
+      with_first_found: "{{ paths_to_vars_files }}"
+    - name: Set up Vagrant machine for source installs
+      include: ../vagrant/vagrant-pretask.yml
+  roles:
+    - pulp3-postgresql
+    - pulp3-workers
+    - pulp3-resource-manager
+    - pulp3-webserver
+    - pulp3-content
+    - pulp3-devel

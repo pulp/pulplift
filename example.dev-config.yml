@@ -1,0 +1,24 @@
+# Options
+pulp_devel_supplement_bashrc: true
+pulp_default_admin_password: password
+pulp_secret_key: "unsafe_default"
+pulp_install_plugins:
+  # pulp-python:
+  #   app_label: "python"
+  #   source_dir: "/home/vagrant/devel/pulp_python"
+  # pulp-docker:
+  #   app_label: "docker"
+  #   source_dir: "/home/vagrant/devel/pulp_docker"
+  # pulp-rpm:
+  #   app_label: "rpm"
+  #   source_dir: "/home/vagrant/devel/pulp_rpm"
+  pulp-file:
+    app_label: "file"
+    source_dir: "/home/vagrant/devel/pulp_file"
+
+# Vagrant source install Required
+pulp_user: "vagrant"
+developer_user: "vagrant"
+developer_user_home: "/home/vagrant"
+pulp_plugin_source_dir: "/home/vagrant/devel/pulpcore-plugin"
+pulp_source_dir: "/home/vagrant/devel/pulp"

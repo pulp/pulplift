@@ -12,8 +12,11 @@ repo
 *.retry
 *.pyc
 user_playbooks
-playbooks/galaxy_roles
+playbooks/roles
 requirements.yml
+local.user-config.yml
+local.dev-config.yml
+
 
 # Vagrant
 .vagrant

@@ -1,0 +1,16 @@
+---
+- hosts: all
+  vars:
+    paths_to_vars_files:
+    - '../local.user-config.yml'
+    - '../example.user-config.yml'
+  pre_tasks:
+    - include_vars: "{{ item }}"
+      with_first_found: "{{ paths_to_vars_files }}"
+
+  roles:
+    - pulp3-postgresql
+    - pulp3-workers
+    - pulp3-resource-manager
+    - pulp3-webserver
+    - pulp3-content
