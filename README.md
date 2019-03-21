@@ -4,7 +4,7 @@ This is based on and makes use of the Vagrant based configuration of the [Forkli
 
 ## Available Boxes
 
-The aim is to provide every supported OS and major installation type combination for Pulp 3 based upon what is available from [ansible-pulp3](https://github.com/pulp/ansible-pulp3). The currently supported boxes:
+The aim is to provide every supported OS and major installation type combination for Pulp 3 based upon what is available from [ansible-pulp](https://github.com/pulp/ansible-pulp). The currently supported boxes:
 
 ```
 centos7                   not created (libvirt)
