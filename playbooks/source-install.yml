@@ -10,7 +10,7 @@
     - name: Set up Vagrant machine for source installs
       include: ../vagrant/vagrant-pretask.yml
   roles:
-    - pulp3-postgresql
+    - pulp3-database
     - pulp3-workers
     - pulp3-resource-manager
     - pulp3-webserver

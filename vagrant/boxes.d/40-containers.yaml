@@ -2,26 +2,26 @@ pulp3-containers-fedora28:
   box: 'fedora28'
   memory: 2048
   ansible:
-    playbook: "ansible-pulp3/systemd-container.yaml"
-    galaxy_role_file: "ansible-pulp3/requirements.yml"
+    playbook: "ansible-pulp/systemd-container.yaml"
+    galaxy_role_file: "ansible-pulp/requirements.yml"
 
 pulp3-containers-fedora29:
   box: 'fedora29'
   memory: 2048
   ansible:
-    playbook: "ansible-pulp3/systemd-container.yaml"
-    galaxy_role_file: "ansible-pulp3/requirements.yml"
+    playbook: "ansible-pulp/systemd-container.yaml"
+    galaxy_role_file: "ansible-pulp/requirements.yml"
 
 pulp3-containers-centos7:
   box: 'centos7'
   memory: 2048
   ansible:
-    playbook: "ansible-pulp3/systemd-container.yaml"
-    galaxy_role_file: "ansible-pulp3/requirements.yml"
+    playbook: "ansible-pulp/systemd-container.yaml"
+    galaxy_role_file: "ansible-pulp/requirements.yml"
 
 # pulp3-containers-debian10:
 #   box: 'debian10'
 #   memory: 2048
 #   ansible:
-#     playbook: "ansible-pulp3/systemd-container.yaml"
-#     galaxy_role_file: "ansible-pulp3/requirements.yml"
+#     playbook: "ansible-pulp/systemd-container.yaml"
+#     galaxy_role_file: "ansible-pulp/requirements.yml"

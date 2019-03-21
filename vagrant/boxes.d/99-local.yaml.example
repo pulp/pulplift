@@ -7,7 +7,7 @@ centos7-pulp3-source:
     guest_path: /home/vagrant/nfs/
   ansible:
     playbook: "playbooks/source-install.yml"
-    galaxy_role_file: "ansible-pulp3/requirements.yml"
+    galaxy_role_file: "ansible-pulp/requirements.yml"
     verbose: vv
     variables:
       pulp_source_dir: /home/vagrant/nfs/pulp
