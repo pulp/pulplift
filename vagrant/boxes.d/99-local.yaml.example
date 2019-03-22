@@ -15,4 +15,20 @@ centos7-pulp3-source:
         pulp-file:
           app_label: "pulp_file"
           source_dir: "/home/vagrant/nfs/pulp_file"
+
+centos7-pulp3-github:
+  box: 'pulp3-source-centos7'
+  memory: 4096
+  ansible:
+    playbook: "playbooks/source-install.yml"
+    galaxy_role_file: "ansible-pulp3/requirements.yml"
+    verbose: vv
+    variables:
+      pulp_requirements_dir: "https://raw.githubusercontent.com/pulp/pulpcore/master/"
+      pulp_plugin_source_dir: "git+https://github.com/pulp/pulpcore-plugin.git#egg=pulpcore-plugin"
+      pulp_source_dir: "git+https://github.com/pulp/pulpcore.git#egg=pulpcore"
+      pulp_install_plugins:
+        pulp-file:
+          app_label: "file"
+          source_dir: "git+https://github.com/pulp/pulp_file.git#egg=pulp-file"
 ...
