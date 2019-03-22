@@ -1,27 +1,27 @@
 pulp3-sandbox-fedora28:
   box: 'fedora28'
-  memory: 2048
+  memory: 4096
   ansible:
     playbook: "playbooks/user-sandbox.yml"
     galaxy_role_file: "ansible-pulp/requirements.yml"
 
 pulp3-sandbox-fedora29:
   box: 'fedora29'
-  memory: 2048
+  memory: 4096
   ansible:
     playbook: "playbooks/user-sandbox.yml"
     galaxy_role_file: "ansible-pulp/requirements.yml"
 
 pulp3-sandbox-centos7:
   box: 'centos7'
-  memory: 2048
+  memory: 4096
   ansible:
     playbook: "playbooks/user-sandbox.yml"
     galaxy_role_file: "ansible-pulp/requirements.yml"
 
 # pulp3-sandbox-debian10:
 #   box: 'debian10'
-#   memory: 2048
+#   memory: 4096
 #   ansible:
 #     playbook: "ansible-pulp/user-sandbox.yml"
 #     galaxy_role_file: "ansible-pulp/requirements.yml"
