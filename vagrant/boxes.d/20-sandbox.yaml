@@ -26,9 +26,9 @@ pulp3-sandbox-centos7:
     playbook: "playbooks/user-sandbox.yml"
     galaxy_role_file: "ansible-pulp/requirements.yml"
 
-# pulp3-sandbox-debian10:
-#   box: 'debian10'
-#   memory: 4096
-#   ansible:
-#     playbook: "ansible-pulp/user-sandbox.yml"
-#     galaxy_role_file: "ansible-pulp/requirements.yml"
+pulp3-sandbox-debian10:
+  box: 'debian10'
+  memory: 4096
+  ansible:
+    playbook: "playbooks/user-sandbox.yml"
+    galaxy_role_file: "ansible-pulp/requirements.yml"
