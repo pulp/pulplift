@@ -15,7 +15,8 @@ git submodule update --init
 You will also need to [clone the source
 code](https://docs.pulpproject.org/en/3.0/nightly/contributing/dev-setup.html#get-the-source).
 
-Finally, you can spin up your development environment. With ``vagrant up <box-name>``
+Finally, you can spin up your development environment with ``vagrant up <box-name>``. If you have
+any custom configuration options **including plugin choice**, see "Configuration" section below.
 
 ```
 vagrant up pulp3-source-fedora28
