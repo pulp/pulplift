@@ -3,12 +3,18 @@ pulp_devel_supplement_bashrc: true
 pulp_default_admin_password: password
 pulp_secret_key: "unsafe_default"
 pulp_install_plugins:
-  # pulp-python:
-  #   app_label: "python"
-  #   source_dir: "/home/vagrant/devel/pulp_python"
+  # pulp-ansible:
+  #   app_label: "ansible"
+  #   source_dir: "/home/vagrant/devel/pulp_ansible"
+  # pulp-certguard:
+  #   app_label: "certguard"
+  #   source_dir: "/home/vagrant/devel/pulp-certguard"
   # pulp-docker:
   #   app_label: "docker"
   #   source_dir: "/home/vagrant/devel/pulp_docker"
+  # pulp-python:
+  #   app_label: "python"
+  #   source_dir: "/home/vagrant/devel/pulp_python"
   # pulp-rpm:
   #   app_label: "rpm"
   #   source_dir: "/home/vagrant/devel/pulp_rpm"
