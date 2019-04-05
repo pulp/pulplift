@@ -1,5 +1,11 @@
 pulp_default_admin_password: password
 pulp_install_plugins:
+  # pulp-ansible:
+  #   app_label: "ansible"
+  # pulp-certguard:
+  #   app_label: "certguard"
+  # pulp-docker:
+  #   app_label: "docker"
   # pulp-python:
   #   app_label: "python"
   # pulp-rpm:
