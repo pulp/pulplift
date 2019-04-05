@@ -12,6 +12,13 @@ pulp3-sandbox-fedora29:
     playbook: "playbooks/user-sandbox.yml"
     galaxy_role_file: "ansible-pulp/requirements.yml"
 
+pulp3-sandbox-fedora30:
+  box: 'fedora30'
+  memory: 4096
+  ansible:
+    playbook: "playbooks/user-sandbox.yml"
+    galaxy_role_file: "ansible-pulp/requirements.yml"
+
 pulp3-sandbox-centos7:
   box: 'centos7'
   memory: 4096

@@ -13,3 +13,14 @@ fedora29:
   ansible:
     variables:
       ansible_python_interpreter: /usr/bin/python3
+
+fedora30:
+  box_name: 'fedora/30-cloud-base'
+  # Fedora hosted URL, currently beta, should become final release.
+  # Switch to Vagrant's own repo once Fedora 30 is released.
+  box_url: 'https://kojipkgs.fedoraproject.org/compose/30/latest-Fedora-30/compose/Cloud/x86_64/images/Fedora-Cloud-Base-Vagrant-30_Beta-1.8.x86_64.vagrant-libvirt.box'
+  image_name: !ruby/regexp '/Fedora 30.*/'
+  pty: true
+  ansible:
+    variables:
+      ansible_python_interpreter: /usr/bin/python3
