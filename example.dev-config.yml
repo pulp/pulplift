@@ -9,6 +9,9 @@ pulp_install_plugins:
   # pulp-certguard:
   #   app_label: "certguard"
   #   source_dir: "/home/vagrant/devel/pulp-certguard"
+  # pulp-deb:
+  #   app_label: "deb"
+  #   source_dir: "/home/vagrant/devel/pulp_deb"
   # pulp-docker:
   #   app_label: "docker"
   #   source_dir: "/home/vagrant/devel/pulp_docker"
