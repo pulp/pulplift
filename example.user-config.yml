@@ -4,6 +4,8 @@ pulp_install_plugins:
   #   app_label: "ansible"
   # pulp-certguard:
   #   app_label: "certguard"
+  # pulp-deb:
+  #   app_label: "deb"
   # pulp-docker:
   #   app_label: "docker"
   # pulp-python:
