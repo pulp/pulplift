@@ -4,19 +4,25 @@ This is based on and makes use of the Vagrant based configuration of the
 [Forklift](https://github.com/theforeman/forklift) project. Please see the Forklift documentation
 for all configuration options available when creating custom boxes.
 
-## Quickstart
+## Setup
 
-To setup Pulplift, ensure that all submodules are updated and in place.
+Before using Pulplift, ensure that all submodules are updated and in place.
 
 ```
 git submodule update --init
 ```
 
-You will also need to [clone the source
-code](https://docs.pulpproject.org/en/3.0/nightly/contributing/dev-setup.html#get-the-source).
+After your git submodules are installed, you can then use ``vagrant up <box-name>`` to create a Pulp
+environment. See the list of available boxes below.
 
-Finally, you can spin up your development environment with ``vagrant up <box-name>``. If you have
-any custom configuration options **including plugin choice**, see "Configuration" section below.
+## Setting up a dev environment
+
+After you've set up the git submodules as outlined in the Setup section, you will need to [clone
+the source code](https://docs.pulpproject.org/en/3.0/nightly/contributing/dev-setup.html#get-the-source).
+
+You can then spin up your development environment with the following ``vagrant`` command. If you
+have any custom configuration options **including plugin choice**, see "Configuration" section
+below.
 
 ```
 vagrant up pulp3-source-fedora28
