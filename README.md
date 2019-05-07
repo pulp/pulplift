@@ -4,6 +4,15 @@ This is based on and makes use of the Vagrant based configuration of the
 [Forklift](https://github.com/theforeman/forklift) project. Please see the Forklift documentation
 for all configuration options available when creating custom boxes.
 
+## Requirements
+
+- Ansible 2.5+
+- Vagrant 1.8+
+- Vagrant provider plugin (follow [vagrant](
+  https://www.vagrantup.com/docs/providers/installation.html) instructions)
+  - libvirt and virtualbox supported
+- Enabled virtualization in BIOS
+
 ## Setup
 
 Before using Pulplift, ensure that all submodules are updated and in place.
