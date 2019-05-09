@@ -42,13 +42,13 @@ pulp3-source-centos7:
     playbook: "playbooks/source-install.yml"
     galaxy_role_file: "ansible-pulp/requirements.yml"
 
-# pulp3-source-debian10:
-#   box: 'debian10'
-#   sshfs:
-#     host_path: '..'
-#     guest_path: '/home/vagrant/devel'
-#     reverse: False
-#   memory: 4096
-#   ansible:
-#     playbook: "ansible-pulp/source-install.yml"
-#     galaxy_role_file: "ansible-pulp/requirements.yml"
+pulp3-source-debian10:
+  box: 'debian10'
+  sshfs:
+    host_path: '..'
+    guest_path: '/home/vagrant/devel'
+    reverse: False
+  memory: 4096
+  ansible:
+    playbook: "playbooks/source-install.yml"
+    galaxy_role_file: "ansible-pulp/requirements.yml"

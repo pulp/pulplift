@@ -26,9 +26,9 @@ pulp3-containers-centos7:
     playbook: "ansible-pulp/systemd-container.yaml"
     galaxy_role_file: "ansible-pulp/requirements.yml"
 
-# pulp3-containers-debian10:
-#   box: 'debian10'
-#   memory: 2048
-#   ansible:
-#     playbook: "ansible-pulp/systemd-container.yaml"
-#     galaxy_role_file: "ansible-pulp/requirements.yml"
+pulp3-containers-debian10:
+  box: 'debian10'
+  memory: 2048
+  ansible:
+    playbook: "ansible-pulp/systemd-container.yaml"
+    galaxy_role_file: "ansible-pulp/requirements.yml"
