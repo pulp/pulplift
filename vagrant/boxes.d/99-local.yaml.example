@@ -21,7 +21,7 @@ centos7-pulp3-github:
   memory: 4096
   ansible:
     playbook: "playbooks/source-install.yml"
-    galaxy_role_file: "ansible-pulp3/requirements.yml"
+    galaxy_role_file: "ansible-pulp/requirements.yml"
     verbose: vv
     variables:
       pulp_requirements_dir: "https://raw.githubusercontent.com/pulp/pulpcore/master/"
