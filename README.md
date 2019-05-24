@@ -46,16 +46,10 @@ supported boxes:
 ```
 centos7                   not created (libvirt)
 centos7-fips              not created (libvirt)
-fedora28                  not created (libvirt)
-fedora29                  not created (libvirt)
 fedora30                  not created (libvirt)
 pulp3-sandbox-centos7     not created (libvirt)
-pulp3-sandbox-fedora28    not created (libvirt)
-pulp3-sandbox-fedora29    not created (libvirt)
 pulp3-sandbox-fedora30    not created (libvirt)
 pulp3-source-centos7      not created (libvirt)
-pulp3-source-fedora28     not created (libvirt)
-pulp3-source-fedora29     not created (libvirt)
 pulp3-source-fedora30     not created (libvirt)
 ```
 
