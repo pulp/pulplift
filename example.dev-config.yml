@@ -1,7 +1,6 @@
 # Options
 pulp_devel_supplement_bashrc: true
 pulp_default_admin_password: password
-pulp_secret_key: "unsafe_default"
 pulp_install_plugins:
   # pulp-ansible:
   #   app_label: "ansible"
@@ -31,3 +30,5 @@ developer_user: "vagrant"
 developer_user_home: "/home/vagrant"
 pulp_plugin_source_dir: "/home/vagrant/devel/pulpcore-plugin"
 pulp_source_dir: "/home/vagrant/devel/pulpcore"
+pulp_settings:
+  secret_key: "unsafe_default"
