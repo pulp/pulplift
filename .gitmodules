@@ -6,3 +6,6 @@
 	path = forklift
 	url = ../../theforeman/forklift
 	branch = master
+[submodule "pulp-ci"]
+	path = pulp-ci
+	url = ../pulp-ci

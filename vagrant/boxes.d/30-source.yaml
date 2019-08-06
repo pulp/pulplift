@@ -42,6 +42,23 @@ pulp3-source-centos7:
     playbook: "playbooks/source-install.yml"
     galaxy_role_file: "ansible-pulp/requirements.yml"
 
+pulp2-nightly-pulp3-source-centos7:
+  box: 'centos7'
+  sshfs:
+    host_path: '..'
+    guest_path: '/home/vagrant/devel'
+    reverse: False
+  memory: 4096
+  ansible:
+    playbook:
+      - "pulp-ci/ci/ansible/pulp_server.yaml"
+      - "playbooks/source-install.yml"
+    variables:
+      pulp_build: 'nightly'
+      pulp_version: '2.21'
+      pulp_webserver_server: 'apache'
+    galaxy_role_file: "ansible-pulp/requirements.yml"
+
 pulp3-source-debian10:
   box: 'debian10'
   sshfs:
