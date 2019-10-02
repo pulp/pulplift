@@ -3,25 +3,25 @@ pulp_devel_supplement_bashrc: true
 pulp_default_admin_password: password
 pulp_install_plugins:
   # pulp-ansible:
-  #   app_label: "ansible"
   #   source_dir: "/home/vagrant/devel/pulp_ansible"
   # pulp-certguard:
-  #   app_label: "certguard"
   #   source_dir: "/home/vagrant/devel/pulp-certguard"
+  # pulp-cookbook:
+  #   source_dir: "/home/vagrant/devel/pulp_cookbook"
   # pulp-deb:
-  #   app_label: "deb"
   #   source_dir: "/home/vagrant/devel/pulp_deb"
   # pulp-docker:
-  #   app_label: "docker"
   #   source_dir: "/home/vagrant/devel/pulp_docker"
+  # pulp-gem:
+  #   source_dir: "/home/vagrant/devel/pulp_gem"
+  # pulp-maven:
+  #   source_dir: "/home/vagrant/devel/pulp_maven"
   # pulp-python:
-  #   app_label: "python"
   #   source_dir: "/home/vagrant/devel/pulp_python"
   # pulp-rpm:
-  #   app_label: "rpm"
   #   source_dir: "/home/vagrant/devel/pulp_rpm"
+  #   prereq_role: "/home/vagrant/devel/pulp-rpm-prerequisites"
   pulp-file:
-    app_label: "file"
     source_dir: "/home/vagrant/devel/pulp_file"
 
 # Vagrant source install Required
