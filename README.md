@@ -34,7 +34,7 @@ have any custom configuration options **including plugin choice**, see "Configur
 below.
 
 ```
-vagrant up pulp3-source-fedora28
+vagrant up pulp3-source-fedora29
 ```
 
 ## Available Boxes
@@ -47,20 +47,17 @@ supported boxes:
 centos7                            not created (libvirt)
 centos7-fips                       not created (libvirt)
 debian10                           not created (libvirt)
-fedora28                           not created (libvirt)
 fedora29                           not created (libvirt)
 fedora30                           not created (libvirt)
 pulp2-nightly-pulp3-source-centos7 not created (libvirt)
 pulp3-sandbox-centos7              not created (libvirt)
 pulp3-sandbox-centos7-fips         not created (libvirt)
 pulp3-sandbox-debian10             not created (libvirt)
-pulp3-sandbox-fedora28             not created (libvirt)
 pulp3-sandbox-fedora29             not created (libvirt)
 pulp3-sandbox-fedora30             not created (libvirt)
 pulp3-source-centos7               not created (libvirt)
 pulp3-source-centos7-fips          not created (libvirt)
 pulp3-source-debian10              not created (libvirt)
-pulp3-source-fedora28              not created (libvirt)
 pulp3-source-fedora29              not created (libvirt)
 pulp3-source-fedora30              not created (libvirt)
 ```
