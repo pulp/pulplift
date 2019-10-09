@@ -11,5 +11,8 @@ pulp_install_plugins:
   # pulp-rpm:
   #   prereq_role: "/home/vagrant/devel/pulp-rpm-prerequisites"
   pulp-file: {}
+
+# Uncomment if using pulp-rpm
+#pulp_use_system_wide_pkgs: true
 pulp_settings:
   secret_key: "unsafe_default"
