@@ -15,6 +15,25 @@
         that: "ansible_version.full is version_compare('2.8', '>=')"
         msg: >
           "You must update Ansible to at least 2.8 to use this version of Pulp 3 Installer."
+
+    # Addresses both of these sporadic dnf failures, which affect the vagrant
+    # box that never gets updated past GA release.
+    # https://bodhi.fedoraproject.org/updates/FEDORA-2019-ae52a20ff6
+    # https://bodhi.fedoraproject.org/updates/FEDORA-2019-13479b151a
+    - name: Update Fedora 30 dnf stack
+      dnf:
+        name:
+          - curl
+          - librepo
+          - dnf
+        state: latest
+      retries: 10
+      delay: 3
+      register: result
+      until: result is success
+      when:
+        - ansible_distribution == "Fedora"
+        - ansible_distribution_major_version|int == 30
   roles:
     - pulp-database
     - pulp-workers
