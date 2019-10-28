@@ -25,7 +25,6 @@ centos7-pulp3-github:
     verbose: vv
     variables:
       pulp_requirements_dir: "https://raw.githubusercontent.com/pulp/pulpcore/master/"
-      pulp_plugin_source_dir: "git+https://github.com/pulp/pulpcore-plugin.git#egg=pulpcore-plugin"
       pulp_source_dir: "git+https://github.com/pulp/pulpcore.git#egg=pulpcore"
       pulp_install_plugins:
         pulp-file:
