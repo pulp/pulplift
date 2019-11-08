@@ -10,8 +10,8 @@ pulp_install_plugins:
   #   source_dir: "/home/vagrant/devel/pulp_cookbook"
   # pulp-deb:
   #   source_dir: "/home/vagrant/devel/pulp_deb"
-  # pulp-docker:
-  #   source_dir: "/home/vagrant/devel/pulp_docker"
+  # pulp-container:
+  #   source_dir: "/home/vagrant/devel/pulp_container"
   # pulp-gem:
   #   source_dir: "/home/vagrant/devel/pulp_gem"
   # pulp-maven:
