@@ -9,7 +9,7 @@ pulp_install_plugins:
   # pulp-maven: {}
   # pulp-python: {}
   # pulp-rpm:
-  #   prereq_role: "/home/vagrant/devel/pulp-rpm-prerequisites"
+  #   prereq_role: "pulp.pulp_rpm_prerequisites"
   pulp-file: {}
 
 # Uncomment if using pulp-rpm

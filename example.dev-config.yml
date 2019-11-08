@@ -20,7 +20,10 @@ pulp_install_plugins:
   #   source_dir: "/home/vagrant/devel/pulp_python"
   # pulp-rpm:
   #   source_dir: "/home/vagrant/devel/pulp_rpm"
-  #   prereq_role: "/home/vagrant/devel/pulp-rpm-prerequisites"
+  # # You can specify a folderpath to pulp.pulp_rpm_prerequisites instead of
+  # # just uncommenting this role name, but note that it is a path on the
+  # # pulplift host, not the guest VM like all the other paths.
+  #   prereq_role: "pulp.pulp_rpm_prerequisites"
   pulp-file:
     source_dir: "/home/vagrant/devel/pulp_file"
 
