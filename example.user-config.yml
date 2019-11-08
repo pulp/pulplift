@@ -16,3 +16,4 @@ pulp_install_plugins:
 #pulp_use_system_wide_pkgs: true
 pulp_settings:
   secret_key: "unsafe_default"
+  content_origin: "http://{{ ansible_fqdn }}"
