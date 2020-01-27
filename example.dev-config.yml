@@ -3,28 +3,34 @@ pulp_devel_supplement_bashrc: true
 pulp_default_admin_password: password
 pulp_install_plugins:
   # pulp-ansible:
+  #   binding: pulp-ansible-client
   #   source_dir: "/home/vagrant/devel/pulp_ansible"
   # pulp-certguard:
   #   source_dir: "/home/vagrant/devel/pulp-certguard"
   # pulp-cookbook:
   #   source_dir: "/home/vagrant/devel/pulp_cookbook"
   # pulp-deb:
+  #   binding: pulp-deb-client
   #   source_dir: "/home/vagrant/devel/pulp_deb"
   # pulp-container:
+  #   binding: pulp-container-client
   #   source_dir: "/home/vagrant/devel/pulp_container"
   # pulp-gem:
   #   source_dir: "/home/vagrant/devel/pulp_gem"
   # pulp-maven:
+  #   binding: pulp-maven-client
   #   source_dir: "/home/vagrant/devel/pulp_maven"
   # pulp-python:
   #   source_dir: "/home/vagrant/devel/pulp_python"
   # pulp-rpm:
+  #   binding: pulp-rpm-client
   #   source_dir: "/home/vagrant/devel/pulp_rpm"
   # # You can specify a folderpath to pulp.pulp_rpm_prerequisites instead of
   # # just uncommenting this role name, but note that it is a path on the
   # # pulplift host, not the guest VM like all the other paths.
   #   prereq_role: "pulp.pulp_rpm_prerequisites"
   pulp-file:
+    binding: pulp-file-client
     source_dir: "/home/vagrant/devel/pulp_file"
 
 # Vagrant source install Required
