@@ -12,8 +12,6 @@ pulp_install_plugins:
   #   prereq_role: "pulp.pulp_rpm_prerequisites"
   pulp-file: {}
 
-# Uncomment if using pulp-rpm
-#pulp_use_system_wide_pkgs: true
 pulp_settings:
   secret_key: "unsafe_default"
   content_origin: "http://{{ ansible_fqdn }}"
