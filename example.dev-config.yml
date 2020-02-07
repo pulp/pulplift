@@ -32,8 +32,6 @@ pulp_user: "vagrant"
 developer_user: "vagrant"
 developer_user_home: "/home/vagrant"
 pulp_source_dir: "/home/vagrant/devel/pulpcore"
-# Uncomment if using pulp-rpm
-#pulp_use_system_wide_pkgs: true
 pulp_settings:
   secret_key: "unsafe_default"
   content_origin: "http://{{ ansible_fqdn }}"
