@@ -25,7 +25,7 @@ sudo virt-host-validate
 Before using Pulplift, ensure that all submodules are updated and in place.
 
 ```
-git submodule update --init
+git submodule update --init --remote
 ```
 
 After your git submodules are installed, you can then use ``vagrant up <box-name>`` to create a Pulp

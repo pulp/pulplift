@@ -43,3 +43,14 @@
   when:
     - (ansible_distribution == 'CentOS') or (ansible_distribution == 'RedHat')
     - ansible_distribution_major_version|int == 8
+
+- name: Upgrade CentOS 7 FIPS box
+  yum:
+    name: "*"
+    state: latest
+  when:
+    - (ansible_distribution == 'CentOS') or (ansible_distribution == 'RedHat')
+    - ansible_distribution_version is version("7.6", "<=")
+
+- name: Refresh facts for OS upgrade
+  setup:
