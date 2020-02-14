@@ -18,6 +18,12 @@ pulp3-sandbox-centos7:
   ansible:
     playbook: "playbooks/user-sandbox.yml"
     galaxy_role_file: "pulp_installer/requirements.yml"
+  virtualbox_options:
+    customize:
+    - "modifyvm"
+    - ":id"
+    - "--hwvirtex"
+    - "off"
 
 pulp3-sandbox-centos7-fips:
   box: 'centos7-fips'

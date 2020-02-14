@@ -1,4 +1,10 @@
+---
+language: python
+dist: bionic
 git:
   submodules: true
+install:
+  - .travis/install.sh
 script:
 #  - repo_checks/submodule_check.sh
+  - .travis/script.sh

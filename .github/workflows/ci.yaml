@@ -1,10 +1,64 @@
 ---
 name: CI
-on: [push]
+on: [push, pull_request]
 jobs:
-  build:
+  debug:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
     - name: Setup tmate session
       uses: mxschmitt/action-tmate@v1
+  qemu-emulate:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: install and test commands
+      shell: bash
+      run: |
+        set -xmveuo pipefail
+        git submodule update --init || true
+        cp -p .github/files/qemu/settings.yaml forklift/vagrant/
+        sudo apt update
+        sudo apt install software-properties-common openssh-server vagrant-libvirt libvirt-bin vagrant-sshfs qemu-utils qemu-system-x86
+        sudo apt-add-repository --yes --update ppa:ansible/ansible
+        sudo apt install ansible
+        sudo usermod -a -G libvirt $USER
+        sudo systemctl enable --now ssh
+        sudo systemctl enable --now libvirtd
+        # newgrp libvirt
+        sudo vagrant up pulp3-sandbox-centos7
+  vbox-software:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: install commands
+      shell: bash
+      run: |
+        set -xmveuo pipefail
+        git submodule update --init || true
+        sudo apt update
+        sudo apt install software-properties-common openssh-server
+        sudo apt-add-repository --yes --update ppa:ansible/ansible
+        sudo apt install ansible
+        sudo systemctl enable --now ssh
+        cp -p .github/files/vbox-software/settings.yaml forklift/vagrant/
+        cp -p .github/files/vbox-software/00-centos.yaml vagrant/boxes.d/
+        # VBox 6.0.z is the last branch to support software virtualization :(
+        curl -o /tmp/virtualbox.deb https://download.virtualbox.org/virtualbox/6.0.16/virtualbox-6.0_6.0.16-135674~Ubuntu~bionic_amd64.deb
+        sudo apt install /tmp/virtualbox.deb
+        rm /tmp/virtualbox.deb
+        curl -o /tmp/vagrant.deb https://releases.hashicorp.com/vagrant/2.2.7/vagrant_2.2.7_x86_64.deb
+        sudo apt install /tmp/vagrant.deb
+        rm /tmp/vagrant.deb
+        vagrant plugin install vagrant-sshfs
+        sudo usermod -a -G vboxusers $USER
+        newgrp vboxusers
+    - name: Enable software virt and provision the VM
+      shell: bash
+      run: |
+        set -xmveuo pipefail
+        vagrant up pulp3-sandbox-centos7 || /bin/true
+        export vm=$(VBoxManage list vms | cut -f 1 -d " " | cut -f 2 -d '"')
+        VBoxManage modifyvm $vm --hwvirtex off
+        VBoxManage modifyvm $vm --vtxvpid off
+        vagrant up --provision pulp3-sandbox-centos7

@@ -1,0 +1,10 @@
+---
+virtualbox_options:
+  customize:
+  - "modifyvm"
+  - ":id"
+  - "--hwvirtex"
+  - "off"
+# limitation of vbox software virtualization - 1 vCPU
+cpus: 1
+memory: 2048

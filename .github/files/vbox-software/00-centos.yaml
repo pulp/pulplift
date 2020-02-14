@@ -1,0 +1,11 @@
+centos7:
+  box_name:   'jasonc/centos7-32bit'
+  image_name: !ruby/regexp '/CentOS 7.*PV/'
+  google_options:
+    image_family: 'centos-7'
+  pty:        true
+
+
+centos7-fips:
+  box_name: 'pulp/centos7-fips'
+  pty: true
