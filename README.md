@@ -27,7 +27,7 @@ environment. See the list of available boxes below.
 ## Setting up a dev environment
 
 After you've set up the git submodules as outlined in the Setup section, you will need to [clone
-the source code](https://docs.pulpproject.org/en/3.0/nightly/contributing/dev-setup.html#get-the-source).
+the source code](https://docs.pulpproject.org/en/master/nightly/contributing/dev-setup.html#get-the-source).
 
 You can then spin up your development environment with the following ``vagrant`` command. If you
 have any custom configuration options **including plugin choice**, see "Configuration" section
