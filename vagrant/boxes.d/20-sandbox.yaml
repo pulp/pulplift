@@ -26,6 +26,14 @@ pulp3-sandbox-centos7-fips:
     playbook: "playbooks/user-sandbox.yml"
     galaxy_role_file: "ansible-pulp/requirements.yml"
 
+pulp3-sandbox-centos8-stream:
+  box_name:   'centos/8-stream'
+  box_url:    'https://cloud.centos.org/centos/8-stream/x86_64/images/CentOS-Stream-Vagrant-8-20200113.0.x86_64.vagrant-libvirt.box'
+  memory: 4096
+  ansible:
+    playbook: "playbooks/user-sandbox.yml"
+    galaxy_role_file: "ansible-pulp/requirements.yml"
+
 pulp3-sandbox-debian10:
   box: 'debian10'
   memory: 4096
