@@ -33,6 +33,8 @@ You can then spin up your development environment with the following ``vagrant``
 have any custom configuration options **including plugin choice**, see "Configuration" section
 below.
 
+For more information about dev environment, please look into [pulp-devel](https://github.com/pulp/ansible-pulp/tree/master/roles/pulp-devel) role into [ansible-pulp](https://github.com/pulp/ansible-pulp#roles)
+
 ```
 vagrant up pulp3-source-fedora29
 ```
@@ -87,7 +89,7 @@ plugins to install**, copy one of these files to **create a local variable file*
 look for ``local.dev-config.yml`` or ``local.user-config.yml``, which are not checked into git.
 
 Any of the Ansible variables can be set in this local variable file. Please see the README of each
-[ansible-pulp](https://github.com/pulp/ansible-pulp#pulp-3-ansible-installer) role for more
+[ansible-pulp](https://github.com/pulp/ansible-pulp#roles) role for more
 detailed information.
 
 #### Running a playbook directly
