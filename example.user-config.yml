@@ -1,6 +1,8 @@
 pulp_default_admin_password: password
 pulp_install_plugins:
   # pulp-ansible: {}
+  # galaxy-pulp: {}
+  # galaxy-ng: {}
   # pulp-certguard: {}
   # pulp-cookbook: {}
   # pulp-deb: {}
