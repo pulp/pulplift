@@ -11,7 +11,14 @@ for all configuration options available when creating custom boxes.
 - Vagrant provider plugin (follow [vagrant](
   https://www.vagrantup.com/docs/providers/installation.html) instructions)
   - libvirt and virtualbox supported
+- Recommended: [Vagrant sshfs plugin](https://github.com/dustymabe/vagrant-sshfs#install-plugin) if using libvirt
 - Enabled virtualization in BIOS
+
+#### Quick install requirements on Fedora
+```
+sudo dnf install ansible vagrant-libvirt vagrant-sshfs @virtualization
+sudo virt-host-validate
+```
 
 ## Setup
 
@@ -67,12 +74,32 @@ pulp3-source-fedora30              not created (libvirt)
 pulp3-source-fedora31              not created (libvirt)
 ```
 
-#### Base Boxes
+#### Base OS Boxes
 
-The base OS boxes, such as centos7, can be used to spin-up a clean environment.
+The base OS boxes, such as `centos7`, can be used to spin-up a clean environment.
 
 ```
 vagrant up centos7
+```
+
+#### Sandbox boxes
+
+Sandbox boxes, such as `pulp3-sandbox-centos7` can be used to do a standard install of Pulp for users.
+
+```
+vagrant up pulp3-sandbox-centos7
+```
+
+#### Source boxes
+
+Source boxes, such as `pulp3-source-centos7` can be used to do an install of pulp with developer tools & helper scripts/aliases for developers.
+
+The example [configuration](#Configuration) requires that the `pulpcore` git repo directory and plugin git repo directories (e.g. `pulp_file`) exist in folders, under the same parent folder as `pulplift`, so they can be mounted on the box.
+
+If using libvirt, the [vagrant-sshfs](https://github.com/dustymabe/vagrant-sshfs#install-plugin) plugin must be installed to mount.
+
+```
+vagrant up pulp3-source-centos7
 ```
 
 ## Ansible
