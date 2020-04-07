@@ -40,7 +40,7 @@ You can then spin up your development environment with the following ``vagrant``
 have any custom configuration options **including plugin choice**, see "Configuration" section
 below.
 
-For more information about dev environment, please look into [pulp-devel](https://github.com/pulp/ansible-pulp/tree/master/roles/pulp-devel) role into [ansible-pulp](https://github.com/pulp/ansible-pulp#roles)
+For more information about dev environment, please look into [pulp-devel](https://github.com/pulp/pulp_installer/tree/master/roles/pulp-devel) role into [pulp_installer](https://github.com/pulp/pulp_installer#roles)
 
 ```
 vagrant up pulp3-source-fedora29
@@ -49,7 +49,7 @@ vagrant up pulp3-source-fedora29
 ## Available Boxes
 
 The aim is to provide every supported OS and major installation type combination for Pulp 3 based
-upon what is available from [ansible-pulp](https://github.com/pulp/ansible-pulp). The currently
+upon what is available from [pulp_installer](https://github.com/pulp/pulp_installer). The currently
 supported boxes:
 
 ```
@@ -116,7 +116,7 @@ plugins to install**, copy one of these files to **create a local variable file*
 look for ``local.dev-config.yml`` or ``local.user-config.yml``, which are not checked into git.
 
 Any of the Ansible variables can be set in this local variable file. Please see the README of each
-[ansible-pulp](https://github.com/pulp/ansible-pulp#roles) role for more
+[pulp_installer](https://github.com/pulp/pulp_installer#roles) role for more
 detailed information.
 
 #### Running a playbook directly

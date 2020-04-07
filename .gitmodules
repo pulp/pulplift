@@ -1,11 +1,12 @@
-[submodule "ansible-pulp"]
-	path = ansible-pulp
-	url = ../ansible-pulp
-	branch = master
 [submodule "forklift"]
 	path = forklift
 	url = ../../theforeman/forklift
 	branch = master
 [submodule "pulp-ci"]
 	path = pulp-ci
-	url = ../pulp-ci
+	url = ../../pulp/pulp-ci
+	branch = master
+[submodule "pulp_installer"]
+	path = pulp_installer
+	url = ../../pulp/pulp_installer
+	branch = master
