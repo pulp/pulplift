@@ -7,7 +7,7 @@ pulp3-source-fedora30:
   memory: 4096
   ansible:
     playbook: "playbooks/source-install.yml"
-    galaxy_role_file: "ansible-pulp/requirements.yml"
+    galaxy_role_file: "pulp_installer/requirements.yml"
 
 pulp3-source-fedora31:
   box: 'fedora31'
@@ -18,7 +18,7 @@ pulp3-source-fedora31:
   memory: 4096
   ansible:
     playbook: "playbooks/source-install.yml"
-    galaxy_role_file: "ansible-pulp/requirements.yml"
+    galaxy_role_file: "pulp_installer/requirements.yml"
 
 pulp3-source-centos7:
   box: 'centos7'
@@ -29,7 +29,7 @@ pulp3-source-centos7:
   memory: 4096
   ansible:
     playbook: "playbooks/source-install.yml"
-    galaxy_role_file: "ansible-pulp/requirements.yml"
+    galaxy_role_file: "pulp_installer/requirements.yml"
 
 pulp2-nightly-pulp3-source-centos7:
   box: 'centos7'
@@ -46,7 +46,7 @@ pulp2-nightly-pulp3-source-centos7:
       pulp_build: 'nightly'
       pulp_version: '2.21'
       pulp_webserver_server: 'apache'
-    galaxy_role_file: "ansible-pulp/requirements.yml"
+    galaxy_role_file: "pulp_installer/requirements.yml"
 
 pulp3-source-centos7-fips:
   box: 'centos7-fips'
@@ -57,7 +57,7 @@ pulp3-source-centos7-fips:
   memory: 4096
   ansible:
     playbook: "playbooks/source-install.yml"
-    galaxy_role_file: "ansible-pulp/requirements.yml"
+    galaxy_role_file: "pulp_installer/requirements.yml"
 
 pulp3-source-centos8-stream:
   box_name:   'centos/8-stream'
@@ -69,7 +69,7 @@ pulp3-source-centos8-stream:
   memory: 4096
   ansible:
     playbook: "playbooks/source-install.yml"
-    galaxy_role_file: "ansible-pulp/requirements.yml"
+    galaxy_role_file: "pulp_installer/requirements.yml"
 
 pulp3-source-debian10:
   box: 'debian10'
@@ -80,4 +80,4 @@ pulp3-source-debian10:
   memory: 4096
   ansible:
     playbook: "playbooks/source-install.yml"
-    galaxy_role_file: "ansible-pulp/requirements.yml"
+    galaxy_role_file: "pulp_installer/requirements.yml"
