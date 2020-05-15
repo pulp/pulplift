@@ -40,7 +40,7 @@ You can then spin up your development environment with the following ``vagrant``
 have any custom configuration options **including plugin choice**, see "Configuration" section
 below.
 
-For more information about dev environment, please look into [pulp-devel](https://github.com/pulp/pulp_installer/tree/master/roles/pulp-devel) role into [pulp_installer](https://github.com/pulp/pulp_installer#roles)
+For more information about dev environment, please look into [pulp_devel](https://github.com/pulp/pulp_installer/tree/master/roles/pulp_devel) role into [pulp_installer](https://github.com/pulp/pulp_installer#roles)
 
 ```
 vagrant up pulp3-source-fedora29
