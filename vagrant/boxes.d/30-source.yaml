@@ -1,5 +1,5 @@
-pulp3-source-fedora30:
-  box: 'fedora30'
+pulp3-source-fedora31:
+  box: 'fedora31'
   sshfs:
     host_path: '..'
     guest_path: '/home/vagrant/devel'
@@ -9,8 +9,8 @@ pulp3-source-fedora30:
     playbook: "playbooks/source-install.yml"
     galaxy_role_file: "pulp_installer/requirements.yml"
 
-pulp3-source-fedora31:
-  box: 'fedora31'
+pulp3-source-fedora32:
+  box: 'fedora32'
   sshfs:
     host_path: '..'
     guest_path: '/home/vagrant/devel'
@@ -37,7 +37,8 @@ pulp2-nightly-pulp3-source-centos7:
     host_path: '..'
     guest_path: '/home/vagrant/devel'
     reverse: False
-  memory: 4096
+  memory: 10500
+  cpus: 4
   ansible:
     playbook:
       - "pulp-ci/ci/ansible/pulp_server.yaml"
