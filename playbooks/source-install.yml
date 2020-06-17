@@ -21,6 +21,7 @@
     - import_tasks: pre_tasks/vagrant-workarounds.yml
 
   roles:
+    - pulp_redis
     - pulp_database
     - pulp_workers
     - pulp_resource_manager
