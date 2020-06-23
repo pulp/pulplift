@@ -9,8 +9,7 @@ pulp_install_plugins:
   # pulp-gem: {}
   # pulp-maven: {}
   # pulp-python: {}
-  # pulp-rpm:
-  #   prereq_role: "pulp.pulp_rpm_prerequisites"
+  # pulp-rpm: {}
   pulp-file: {}
 
 pulp_settings:
