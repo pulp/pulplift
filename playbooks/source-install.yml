@@ -21,11 +21,7 @@
     - import_tasks: pre_tasks/vagrant-workarounds.yml
 
   roles:
-    - pulp_database
-    - pulp_workers
-    - pulp_resource_manager
-    - pulp_webserver
-    - pulp_content
+    - pulp_all_services
     - pulp_devel
   environment:
     DJANGO_SETTINGS_MODULE: pulpcore.app.settings
