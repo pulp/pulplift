@@ -3,11 +3,21 @@ name: CI
 on: [push, pull_request]
 jobs:
   debug:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
     - uses: actions/checkout@v1
     - name: Setup tmate session
       uses: mxschmitt/action-tmate@v1
+  qemu-kvm:
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@v1
+    - name: install commands
+      shell: bash
+      run: .travis/install.sh
+    - name: test commands
+      shell: bash
+      run: .travis/script.sh
   qemu-emulate:
     runs-on: ubuntu-latest
     steps:
