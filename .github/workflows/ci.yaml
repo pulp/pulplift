@@ -29,14 +29,14 @@ jobs:
         git submodule update --init || true
         cp -p .github/files/qemu/settings.yaml forklift/vagrant/
         sudo apt update
-        sudo apt install software-properties-common openssh-server vagrant-libvirt libvirt-bin vagrant-sshfs qemu-utils qemu-system-x86
+        sudo apt install software-properties-common openssh-server vagrant-libvirt libvirt-bin vagrant-sshfs qemu-utils qemu-system-x86 dnsmasq
         sudo apt-add-repository --yes --update ppa:ansible/ansible
         sudo apt install ansible
         sudo usermod -a -G libvirt $USER
         sudo systemctl enable --now ssh
         sudo systemctl enable --now libvirtd
         # newgrp libvirt
-        sudo vagrant up pulp3-sandbox-centos7
+        sudo vagrant up pulp3-sandbox-centos8-stream
   vbox-software:
     runs-on: ubuntu-latest
     steps:
@@ -67,8 +67,8 @@ jobs:
       shell: bash
       run: |
         set -xmveuo pipefail
-        vagrant up pulp3-sandbox-centos7 || /bin/true
+        vagrant up pulp3-sandbox-centos8-stream || /bin/true
         export vm=$(VBoxManage list vms | cut -f 1 -d " " | cut -f 2 -d '"')
         VBoxManage modifyvm $vm --hwvirtex off
         VBoxManage modifyvm $vm --vtxvpid off
-        vagrant up --provision pulp3-sandbox-centos7
+        vagrant up --provision pulp3-sandbox-centos8-stream

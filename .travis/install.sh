@@ -3,7 +3,7 @@
 set -xmveuo pipefail
 
 sudo apt update
-sudo apt install software-properties-common openssh-server vagrant-libvirt libvirt-daemon-system vagrant-sshfs qemu-utils qemu-kvm cpu-checker
+sudo apt install software-properties-common openssh-server vagrant-libvirt libvirt-daemon-system vagrant-sshfs qemu-utils qemu-kvm cpu-checker dnsmasq
 # 20.04 focal has ansible 2.9, and no PPA for it.
 if grep -i bionic /etc/os-release ; then
   sudo apt-add-repository --yes --update ppa:ansible/ansible
