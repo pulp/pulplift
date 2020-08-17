@@ -14,3 +14,10 @@ sudo usermod -a -G libvirt $USER
 sudo systemctl enable --now ssh
 sudo systemctl enable --now libvirtd
 # newgrp - libvirt # This causes Travis to hang, with or without the dash
+
+free -m
+df -h
+df -hl
+cat /proc/cpuinfo
+sudo apt install virt-what
+sudo virt-what
