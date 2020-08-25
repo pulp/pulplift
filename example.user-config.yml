@@ -12,6 +12,9 @@ pulp_install_plugins:
   # pulp-rpm: {}
   pulp-file: {}
 
+# # Uncomment to prevent https configuration
+# pulp_webserver_disable_https: true
+
 pulp_settings:
   secret_key: "unsafe_default"
   content_origin: "http://{{ ansible_fqdn }}"
