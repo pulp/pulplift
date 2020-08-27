@@ -4,10 +4,13 @@ set -xmveuo pipefail
 
 sudo apt update
 
-# This may be not be necessary anymore. Thought it would fix the hostname too long issue.
+# Updating Vagrant may not be necessary anymore. Thought it would fix the hostname too long issue.
 curl --output vagrant_2.2.9+dfsg-1_all.deb http://ftp.br.debian.org/debian/pool/main/v/vagrant/vagrant_2.2.9+dfsg-1_all.deb
 sudo apt install ./vagrant_2.2.9+dfsg-1_all.deb
-rm ./vagrant_2.2.9+dfsg-1_all.deb
+# Updating vagrant-sshfs is necessary to support CentOS 7,8 without repos pre-configured.
+curl --output vagrant-sshfs_1.3.4-1_all.deb http://ftp.br.debian.org/debian/pool/main/v/vagrant-sshfs/vagrant-sshfs_1.3.4-1_all.deb
+sudo apt install ./vagrant-sshfs_1.3.4-1_all.deb
+rm ./vagrant-sshfs_1.3.4-1_all.deb
 
 sudo apt install software-properties-common openssh-server vagrant-libvirt libvirt-daemon-system vagrant-sshfs qemu-utils qemu-kvm cpu-checker dnsmasq
 # 20.04 focal has ansible 2.9, and no PPA for it.
