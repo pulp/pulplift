@@ -10,10 +10,19 @@ sudo apt install ./vagrant-sshfs_1.3.4-1_all.deb
 rm ./vagrant-sshfs_1.3.4-1_all.deb
 
 sudo apt install software-properties-common openssh-server vagrant-libvirt libvirt-daemon-system vagrant-sshfs qemu-utils qemu-kvm cpu-checker dnsmasq
-# 20.04 focal has ansible 2.9, and no PPA for it.
+# This PPA doesn't exist for 20.04 (focal)
 if grep -i bionic /etc/os-release ; then
   sudo apt-add-repository --yes --update ppa:ansible/ansible
 fi
+
+# Updating ansible past 2.9.6 (to 2.9.8+) is necessary to manage Fedora 32:
+# https://github.com/ansible/ansible/pull/68211
+if grep -i focal /etc/os-release ; then
+  curl --output ansible_2.9.9+dfsg-1_all.deb http://ftp.br.debian.org/debian/pool/main/a/ansible/ansible_2.9.9+dfsg-1_all.deb
+  sudo apt install ./ansible_2.9.9+dfsg-1_all.deb
+  sudo rm ./ansible_2.9.9+dfsg-1_all.deb
+fi
+
 sudo apt install ansible
 sudo kvm-ok
 sudo usermod -a -G libvirt $USER
