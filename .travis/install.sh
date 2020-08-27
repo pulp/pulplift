@@ -29,7 +29,6 @@ sudo apt install virt-what
 sudo virt-what
 
 # For the source tests
-mkdir ~/devel
-cd ~/devel
+cd ..
 git clone https://github.com/pulp/pulpcore
 git clone https://github.com/pulp/pulp_file
