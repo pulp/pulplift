@@ -4,11 +4,7 @@ set -xmveuo pipefail
 
 sudo apt update
 
-# workaround error when Vagrant itself performs "Setting hostname"
-# on distros including centos7, centos8 & fedora31 but not including debian10
-# hostnamectl set-hostname --static 'pulp3-sandbox-fedora31.travis-job-e61f0f98-78d7-49af-8cbc-266a64b91611.example.com' ; hostnamectl set-hostname --transient 'pulp3-sandbox-fedora31.travis-job-e61f0f98-78d7-49af-8cbc-266a64b91611.example.com'
-# Could not set property: Invalid static hostname 'pulp3-sandbox-fedora31.travis-job-e61f0f98-78d7-49af-8cbc-266a64b91611.example.com'
-# Could not set property: Invalid hostname 'pulp3-sandbox-fedora31.travis-job-e61f0f98-78d7-49af-8cbc-266a64b91611.example.com'
+# This may be not be necessary anymore. Thought it would fix the hostname too long issue.
 curl --output vagrant_2.2.9+dfsg-1_all.deb http://ftp.br.debian.org/debian/pool/main/v/vagrant/vagrant_2.2.9+dfsg-1_all.deb
 sudo apt install ./vagrant_2.2.9+dfsg-1_all.deb
 rm ./vagrant_2.2.9+dfsg-1_all.deb
