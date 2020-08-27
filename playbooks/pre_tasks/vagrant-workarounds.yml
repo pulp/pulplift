@@ -44,11 +44,28 @@
     - (ansible_distribution == 'CentOS') or (ansible_distribution == 'RedHat')
     - ansible_distribution_major_version|int == 8
 
-- name: Upgrade CentOS 7 FIPS box
-  yum:
-    name: "*"
-    state: latest
+- name: CentOS7 7 FIPS workarounds
+  block:
+    - name: Enable us to see the release of the OS
+      yum:
+        name: redhat-lsb-core
+        state: present
+
+    - name: Refresh facts
+      setup:
+
+    - name: Upgrade CentOS 7 FIPS box
+      yum:
+        name: "*"
+        state: latest
+      when:
+      - ansible_distribution_minor_version|int < 7
+
+    - name: Refresh facts
+      setup:
+      when:
+      - ansible_distribution_minor_version|int < 7
+
   when:
     - (ansible_distribution == 'CentOS') or (ansible_distribution == 'RedHat')
     - ansible_distribution_major_version|int == 7
-    - ansible_distribution_minor_version|int < 7
