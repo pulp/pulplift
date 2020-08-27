@@ -21,3 +21,9 @@ df -hl
 cat /proc/cpuinfo
 sudo apt install virt-what
 sudo virt-what
+
+# For the source tests
+mkdir ~/devel
+cd ~/devel
+git clone https://github.com/pulp/pulpcore
+git clone https://github.com/pulp/pulp_file
