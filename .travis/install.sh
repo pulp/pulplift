@@ -3,6 +3,16 @@
 set -xmveuo pipefail
 
 sudo apt update
+
+# workaround error when Vagrant itself performs "Setting hostname"
+# on distros including centos7, centos8 & fedora31 but not including debian10
+# hostnamectl set-hostname --static 'pulp3-sandbox-fedora31.travis-job-e61f0f98-78d7-49af-8cbc-266a64b91611.example.com' ; hostnamectl set-hostname --transient 'pulp3-sandbox-fedora31.travis-job-e61f0f98-78d7-49af-8cbc-266a64b91611.example.com'
+# Could not set property: Invalid static hostname 'pulp3-sandbox-fedora31.travis-job-e61f0f98-78d7-49af-8cbc-266a64b91611.example.com'
+# Could not set property: Invalid hostname 'pulp3-sandbox-fedora31.travis-job-e61f0f98-78d7-49af-8cbc-266a64b91611.example.com'
+curl --output vagrant_2.2.9+dfsg-1_all.deb http://ftp.br.debian.org/debian/pool/main/v/vagrant/vagrant_2.2.9+dfsg-1_all.deb
+sudo apt install ./vagrant_2.2.9+dfsg-1_all.deb
+rm ./vagrant_2.2.9+dfsg-1_all.deb
+
 sudo apt install software-properties-common openssh-server vagrant-libvirt libvirt-daemon-system vagrant-sshfs qemu-utils qemu-kvm cpu-checker dnsmasq
 # 20.04 focal has ansible 2.9, and no PPA for it.
 if grep -i bionic /etc/os-release ; then

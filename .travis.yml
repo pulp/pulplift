@@ -11,7 +11,7 @@ script:
   - .travis/script.sh $TEST
 jobs:
   include:
-    - env: TEST=pulp2-nightly-pulp3-source-centos7
+  # - env: TEST=pulp2-nightly-pulp3-source-centos7 # Not enough RAM
     - env: TEST=pulp3-sandbox-centos7
     - env: TEST=pulp3-sandbox-centos7-fips
     - env: TEST=pulp3-sandbox-centos8-stream
