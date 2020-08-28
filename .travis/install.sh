@@ -24,7 +24,9 @@ if grep -i focal /etc/os-release ; then
 fi
 
 sudo apt install ansible
-sudo kvm-ok
+if [ "$1" != "--no-kvm-check" ]; then
+        sudo kvm-ok
+fi
 sudo usermod -a -G libvirt $USER
 sudo systemctl enable --now ssh
 sudo systemctl enable --now libvirtd
