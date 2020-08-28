@@ -17,7 +17,7 @@ jobs:
       run: .travis/install.sh
     - name: test commands
       shell: bash
-      run: .travis/script.sh pulp3-sandbox-fedora31
+      run: .travis/script.sh pulp3-sandbox-centos7
   qemu-emulate:
     runs-on: ubuntu-latest
     steps:
@@ -36,7 +36,7 @@ jobs:
         sudo systemctl enable --now ssh
         sudo systemctl enable --now libvirtd
         # newgrp libvirt
-        sudo vagrant up pulp3-sandbox-fedora31
+        sudo vagrant up pulp3-sandbox-centos7
   vbox-software:
     runs-on: ubuntu-latest
     steps:
@@ -67,7 +67,7 @@ jobs:
       shell: bash
       run: |
         set -xmveuo pipefail
-        vagrant up pulp3-sandbox-fedora31 || /bin/true
+        vagrant up pulp3-sandbox-centos7 || /bin/true
         export vm=$(VBoxManage list vms | cut -f 1 -d " " | cut -f 2 -d '"')
         VBoxManage modifyvm $vm --hwvirtex off
         VBoxManage modifyvm $vm --vtxvpid off
