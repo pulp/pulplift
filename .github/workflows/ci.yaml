@@ -26,7 +26,7 @@ jobs:
       shell: bash
       run: |
         set -xmveuo pipefail
-        git submodule update --init || true
+        git submodule update --init --remote || true
         cp -p .github/files/qemu/settings.yaml forklift/vagrant/
         sudo apt update
         sudo apt install software-properties-common openssh-server vagrant-libvirt libvirt-bin vagrant-sshfs qemu-utils qemu-system-x86 dnsmasq
@@ -45,7 +45,7 @@ jobs:
       shell: bash
       run: |
         set -xmveuo pipefail
-        git submodule update --init || true
+        git submodule update --init --remote || true
         sudo apt update
         sudo apt install software-properties-common openssh-server
         sudo apt-add-repository --yes --update ppa:ansible/ansible
