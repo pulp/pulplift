@@ -1,4 +1,27 @@
+---
+language: python
+dist: focal
 git:
   submodules: true
-script:
+before_install:
   - repo_checks/submodule_check.sh
+install:
+  - git submodule update --remote
+  - .travis/install.sh
+script:
+  - .travis/script.sh $TEST
+jobs:
+  include:
+  # - env: TEST=pulp2-nightly-pulp3-source-centos7 # Not enough RAM
+    - env: TEST=pulp3-sandbox-centos7
+    - env: TEST=pulp3-sandbox-centos7-fips
+    - env: TEST=pulp3-sandbox-centos8-stream
+    - env: TEST=pulp3-sandbox-debian10
+    - env: TEST=pulp3-sandbox-fedora31
+    - env: TEST=pulp3-sandbox-fedora32
+    - env: TEST=pulp3-source-centos7
+    - env: TEST=pulp3-source-centos7-fips
+    - env: TEST=pulp3-source-centos8-stream
+    - env: TEST=pulp3-source-debian10
+    - env: TEST=pulp3-source-fedora31
+    - env: TEST=pulp3-source-fedora32
