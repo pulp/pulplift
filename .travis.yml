@@ -16,6 +16,7 @@ jobs:
     - env: TEST=pulp3-sandbox-centos7
     - env: TEST=pulp3-sandbox-centos7-fips
     - env: TEST=pulp3-sandbox-centos8
+    - env: TEST=pulp3-sandbox-centos8-fips
     - env: TEST=pulp3-sandbox-centos8-stream
     - env: TEST=pulp3-sandbox-debian10
     - env: TEST=pulp3-sandbox-fedora31
@@ -23,6 +24,7 @@ jobs:
     - env: TEST=pulp3-source-centos7
     - env: TEST=pulp3-source-centos7-fips
     - env: TEST=pulp3-source-centos8
+    - env: TEST=pulp3-source-centos8-fips
     - env: TEST=pulp3-source-centos8-stream
     - env: TEST=pulp3-source-debian10
     - env: TEST=pulp3-source-fedora31
