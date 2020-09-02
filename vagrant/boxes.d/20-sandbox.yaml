@@ -1,6 +1,5 @@
 pulp3-sandbox-fedora31:
   box: 'fedora31'
-  hostname: pulp3-sandbox-fedora31.lan
   memory: 4096
   ansible:
     playbook: "playbooks/user-sandbox.yml"
@@ -8,7 +7,6 @@ pulp3-sandbox-fedora31:
 
 pulp3-sandbox-fedora32:
   box: 'fedora32'
-  hostname: pulp3-sandbox-fedora32.lan
   memory: 4096
   ansible:
     playbook: "playbooks/user-sandbox.yml"
@@ -16,7 +14,6 @@ pulp3-sandbox-fedora32:
 
 pulp3-sandbox-centos7:
   box: 'centos7'
-  hostname: pulp3-sandbox-centos7.lan
   memory: 4096
   ansible:
     playbook: "playbooks/user-sandbox.yml"
@@ -24,7 +21,6 @@ pulp3-sandbox-centos7:
 
 pulp3-sandbox-centos7-fips:
   box: 'centos7-fips'
-  hostname: pulp3-sandbox-centos7-fips.lan
   memory: 4096
   ansible:
     playbook: "playbooks/user-sandbox.yml"
@@ -33,7 +29,6 @@ pulp3-sandbox-centos7-fips:
 pulp3-sandbox-centos8:
   box_name:   'centos/82'
   box_url:    'https://cloud.centos.org/centos/8/x86_64/images/CentOS-8-Vagrant-8.2.2004-20200611.2.x86_64.vagrant-libvirt.box'
-  hostname: pulp3-sandbox-centos8.lan
   memory: 4096
   ansible:
     playbook: "playbooks/user-sandbox.yml"
@@ -41,7 +36,6 @@ pulp3-sandbox-centos8:
 
 pulp3-sandbox-centos8-fips:
   box_name:   'pulp/centos8-fips'
-  hostname: pulp3-sandbox-centos8-fips.lan
   memory: 4096
   ansible:
     playbook: "playbooks/user-sandbox.yml"
@@ -50,7 +44,6 @@ pulp3-sandbox-centos8-fips:
 pulp3-sandbox-centos8-stream:
   box_name:   'centos/8-stream'
   box_url:    'https://cloud.centos.org/centos/8-stream/x86_64/images/CentOS-Stream-Vagrant-8-20200113.0.x86_64.vagrant-libvirt.box'
-  hostname: pulp3-sandbox-centos8-stream.lan
   memory: 4096
   ansible:
     playbook: "playbooks/user-sandbox.yml"
@@ -58,7 +51,6 @@ pulp3-sandbox-centos8-stream:
 
 pulp3-sandbox-debian10:
   box: 'debian10'
-  hostname: pulp3-sandbox-debian10.lan
   memory: 4096
   ansible:
     playbook: "playbooks/user-sandbox.yml"
