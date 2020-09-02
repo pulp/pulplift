@@ -1,0 +1,7 @@
+---
+# This file does nothing unless symlinked to forklift/vagrant/settings.yaml
+
+libvirt_options:
+    # VMs will run faster, but power loss or the hypervisor process
+    # getting killed for any reason will result in lost data on the VM.
+    volume_cache: unsafe
