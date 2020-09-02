@@ -30,6 +30,9 @@ sudo systemctl enable --now ssh
 sudo systemctl enable --now libvirtd
 # newgrp - libvirt # This causes Travis to hang, with or without the dash
 
+# Speed up disk writes by switching qemu-kvm from writeback to unsafe.
+ln -s $PWD/vagrant/settings.ci.yaml forklift/vagrant/settings.yaml
+
 free -m
 df -h
 df -hl
