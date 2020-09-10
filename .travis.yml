@@ -4,9 +4,9 @@ dist: focal
 git:
   submodules: true
 before_install:
-  - repo_checks/submodule_check.sh
+  # - repo_checks/submodule_check.sh
+  - "true"
 install:
-  - git submodule update --remote
   - .travis/install.sh
 script:
   - .travis/script.sh $TEST
