@@ -43,7 +43,7 @@ below.
 For more information about dev environment, please look into [pulp_devel](https://github.com/pulp/pulp_installer/tree/master/roles/pulp_devel) role into [pulp_installer](https://github.com/pulp/pulp_installer#roles)
 
 ```
-vagrant up pulp3-source-fedora29
+vagrant up pulp3-source-fedora32
 ```
 
 ## Available Boxes
