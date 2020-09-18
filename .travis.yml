@@ -6,7 +6,6 @@ git:
 before_install:
   - repo_checks/submodule_check.sh
 install:
-  - git submodule update --remote
   - .travis/install.sh
 script:
   - .travis/script.sh $TEST
