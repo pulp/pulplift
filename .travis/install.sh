@@ -5,7 +5,7 @@ set -xmveuo pipefail
 sudo apt update
 
 # Updating vagrant-sshfs is necessary to support CentOS 7,8 without repos pre-configured.
-curl --output vagrant-sshfs_1.3.4-1_all.deb http://ftp.br.debian.org/debian/pool/main/v/vagrant-sshfs/vagrant-sshfs_1.3.4-1_all.deb
+curl -L --output vagrant-sshfs_1.3.4-1_all.deb http://ftp.br.debian.org/debian/pool/main/v/vagrant-sshfs/vagrant-sshfs_1.3.4-1_all.deb
 sudo apt install ./vagrant-sshfs_1.3.4-1_all.deb
 rm ./vagrant-sshfs_1.3.4-1_all.deb
 
@@ -18,7 +18,8 @@ fi
 # Updating ansible past 2.9.6 (to 2.9.8+) is necessary to manage Fedora 32:
 # https://github.com/ansible/ansible/pull/68211
 if grep -i focal /etc/os-release ; then
-  curl --output ansible_2.9.9+dfsg-1_all.deb http://ftp.br.debian.org/debian/pool/main/a/ansible/ansible_2.9.9+dfsg-1_all.deb
+  # The 20.10 (groovy) version. Still Python 3.8
+  curl -L --output ansible_2.9.9+dfsg-1_all.deb http://mirrors.kernel.org/ubuntu/pool/universe/a/ansible/ansible_2.9.9+dfsg-1_all.deb
   sudo apt install ./ansible_2.9.9+dfsg-1_all.deb
   sudo rm ./ansible_2.9.9+dfsg-1_all.deb
 fi
