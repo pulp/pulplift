@@ -1,0 +1,9 @@
+---
+- name: run tests
+  hosts:
+    - "{{ forklift_server_name }}"
+  vars_files:
+    - ../vars/install_base.yml
+    - ../vars/forklift_{{ pipeline_type }}.yml
+  roles:
+    - pulp_health_check
