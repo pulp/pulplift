@@ -1,5 +1,7 @@
 # Pulplift
 
+:warning: **This Repository is deprecated.** It's features were merged into [pulp installer](https://github.com/pulp/pulp_installer).
+
 This is based on and makes use of the Vagrant based configuration of the
 [Forklift](https://github.com/theforeman/forklift) project. Please see the Forklift documentation
 for all configuration options available when creating custom boxes.
